@@ -1,0 +1,36 @@
+
+#data{
+     height: 100vh;
+     width: 95vw;
+     margin-left:200px;
+     position: absolute;
+     overflow: auto;
+     padding-left:10px; 
+     text-align: justify;
+     transition: margin-left .5s;
+     padding-bottom: 100px;
+    }
+    .tabcontent{
+    padding-bottom: 100px;
+}
+
+.btn{
+width:100%;
+text-align: left;
+color:#00004d;
+background-color: #cccccc;
+/*padding-left: 0px;*/
+}
+
+.btn span{
+    padding-left:2%; 
+}
+.dropdown-menu{
+    text-align: center;
+    width: 100%;
+    background-color: #f2f2f2;
+    color:#00004d;
+}
+#menu{
+    color:#00004d;
+}

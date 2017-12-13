@@ -1,0 +1,20 @@
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" style="border: none;" (click)="closeNav()">&times;</a>
+    <!-- <div class="line"></div>-->    
+    <!-- <div *ngFor = "let x of navtabs">
+    	<hr>
+    	<div *ngIf = "!x.isDD"> 
+    	<a routerLink="/{{x.Title}}">{{x.Title}}</a>
+    	</div>
+    	<div *ngIf = "x.isDD">
+    	<app-dropdown [Title]="x.Title" [values]="jobs"></app-dropdown>
+    	</div>	
+    </div> -->
+    <div *ngFor = "let x of navtabs">
+    	<hr>
+    	<a routerLink="/{{x.Title}}">{{x.Title}}</a>
+    </div>
+    <hr>
+</div>
+
+<router-outlet></router-outlet>

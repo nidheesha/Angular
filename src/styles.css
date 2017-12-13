@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+ body{
+        background-color:#f2f2f2 ;
+      padding-top: 10vh;
+      padding-bottom: 100px;
+      
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+         background-color: #00004d;
+        z-index: 1!important;
+        color: white;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+        padding-top: 4px;
+    }
+    .container{
+        width: 100%;
+        text-align: center;
+        margin: 0; /* Center the DIV horizontally */
+    }
+    #glyph1 {
+        font-size: 15px;
+        color:white;
+    }/* You can add global styles to this file, and also import other style files */

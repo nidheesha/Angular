@@ -1,0 +1,15 @@
+#chart{
+	 display: block;
+	/* background-color: green;*/
+	/* height: 70vh;
+	 width: 80vh;*/
+	 padding-top:10px;
+	/* min-height: 150px;
+	 min-width: 280px;*/
+}
+canvas{
+	padding: 0px;
+	/*background-color: yellow;*/
+	text-align: left;
+	/*margin-top: 30px;*/
+}
