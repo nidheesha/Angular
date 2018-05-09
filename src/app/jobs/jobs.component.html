@@ -1,29 +1,49 @@
+<app-sidebar [navtabs] = "navs"></app-sidebar>
+
 <div id="data">
-    <div class="col-xs-*" style="text-align: justify;">
-        <div id="Home" class="tabcontent" >
-        	<div class="row">
-            <div class="col-xs-12" style="color: #00004d;background-color: #e6e6e6;text-align: center;">
-            <!-- <app-dropdown [Title]="title" [values]="droplist"></app-dropdown>  -->    
-            <div class="col-sm-4 col-sm-offset-4"><h2>{{titleofjob}}</h2></div>
-            	<div class="dropdown col-sm-4" >
-				  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: inherit;text-align: right;">Jobs-Executed<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
-				  </button>
-				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 50%;margin-left: 50%">
-				  	<div *ngFor = "let x of joblist">
-				    <a id="menu" (click)="onclick(x)">{{x.Title}}</a>
-				  	</div>
-				  </div>
-				</div>
-        	</div>
+
+     <div class="container-fluid">
+     <nav class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
+       <!--  <span class="sr-only">Toggle navigation</span> -->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">{{this.g.selectedjob | uppercase}}</a>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Job List<span class="caret"></span></a>
+          <ul class="dropdown-menu" >
+            <li *ngFor = "let x of joblist">  <a  (click)="onclick(x)">{{x}}</a></li>
+         </ul>
+        </li>
+         <li>
+          <a routerLink="/Observations"> Detailed Report of {{this.g.selectedjob}}<span class="glyphicon glyphicon-triangle-right"></span></a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+  </div>
+   
+    <div class="row">
+        <div class="col-sm-6" style="background-color: #e6e6e6;" >
+      
+        <app-stackbarchart [barChartLabels]="labels" [barChartData]="data" ></app-stackbarchart>
         </div>
-            <div class="row" style="margin-top: 10px;">
-        	<div class="col-sm-6" style="max-height: 90vh;max-width: 90vh;">
-        	<app-piechart  [pieChartLabels]="chartlabels" [pieChartData]="chartdata"></app-piechart>
-       		</div>
-            <div class="col-sm-6" style="margin-top: 15px;">
-                <app-table [columns]="col" [rows]="datajobs"></app-table>
-            </div>
-        </div>
-        </div>
-    </div>   
+    </div>
+  
+    <div style="margin-bottom: 100px; visibility: hidden;"></div>   
+
 </div>
+
+
+
+

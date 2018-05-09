@@ -1,0 +1,21 @@
+<app-sidebar [navtabs] = "navs"></app-sidebar>
+<div id="data">
+<app-header (onclick)="onclick($event)"></app-header>
+
+            <h3>Image Analytics</h3>
+            <p>The data from the thermal and visual images were used and analysed through Detect’s
+			proprietary algorithms to generate the structural health map of the flare stack to help as
+			decision making tools for maintenance activities.
+			The 2D format of the health map of the chimney is shown below. The 3D form is
+			available separately in the attached pen drive. Inspection and maintenance engineers are
+			advised to read the appendix to know the file paths to the same.</p>
+			<div class="col-sm-6">
+			<button type="button" class="btn-block">2D-Image Analytics</button>
+		</div>
+		<div class="col-sm-6">
+			<button type="button" class="btn-block">3D-Image Analytics</button>
+		</div>
+            
+    <div style="margin-bottom: 100px; visibility: hidden;"></div>   
+      
+</div>

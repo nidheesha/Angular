@@ -1,0 +1,103 @@
+{
+  "_from": "viewerjs",
+  "_id": "viewerjs@1.0.0-beta",
+  "_inBundle": false,
+  "_integrity": "sha512-UaYQoRvYVdf4ZGuT0bR8xUCpSEwxecKJ0qix18zDog6QjrjfVaD5kMAqPQqsUdQsZ4BFASACS+2oV8sj1bukmg==",
+  "_location": "/viewerjs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "viewerjs",
+    "name": "viewerjs",
+    "escapedName": "viewerjs",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/viewerjs/-/viewerjs-1.0.0-beta.tgz",
+  "_shasum": "e8965289f2ef0f77fb4a80d8ffc24e60cb7e01a4",
+  "_spec": "viewerjs",
+  "_where": "/media/nidheesha/OS/Users/nidheesha/Desktop/DeTect/WinterIntern2017/DashboardAngular",
+  "author": {
+    "name": "Chen Fengyuan",
+    "url": "http://chenfengyuan.com"
+  },
+  "browser": "dist/viewer.js",
+  "bugs": {
+    "url": "https://github.com/fengyuanchen/viewerjs/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "JavaScript image viewer.",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "cpy-cli": "^1.0.1",
+    "cssnano": "^3.10.0",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "node-qunit-phantomjs": "^2.0.0",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^4.1.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-header": "^1.0.0",
+    "postcss-url": "^7.3.0",
+    "rollup": "^0.52.2",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-watch": "^4.3.1",
+    "stylefmt": "^6.0.0",
+    "uglify-js": "^3.2.2"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "homepage": "https://fengyuanchen.github.io/viewerjs",
+  "keywords": [
+    "image",
+    "viewer",
+    "viewerjs",
+    "viewer.js",
+    "html",
+    "css",
+    "javascript",
+    "front-end",
+    "web",
+    "component",
+    "development"
+  ],
+  "license": "MIT",
+  "main": "dist/viewer.common.js",
+  "module": "dist/viewer.esm.js",
+  "name": "viewerjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengyuanchen/viewerjs.git"
+  },
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "postcss src/css/viewer.css -o dist/viewer.css --no-map",
+    "build:js": "rollup -c",
+    "clear": "del-cli dist",
+    "compress": "npm run compress:css && npm run compress:js",
+    "compress:css": "postcss dist/viewer.css -u cssnano -o dist/viewer.min.css --no-map",
+    "compress:js": "uglifyjs dist/viewer.js -o dist/viewer.min.js -c -m --comments /^!/",
+    "copy": "cpy dist/viewer.css docs/css",
+    "lint": "eslint src/js --fix",
+    "release": "npm run clear && npm run lint && npm run build && npm run compress && npm run copy && npm test",
+    "start": "npm-run-all --parallel watch:*",
+    "test": "node-qunit-phantomjs test/index.html --timeout 10",
+    "watch:css": "postcss src/css/viewer.css -o docs/css/viewer.css -m -w",
+    "watch:js": "rollup -c -m -w"
+  },
+  "style": "dist/viewer.css",
+  "version": "1.0.0-beta"
+}

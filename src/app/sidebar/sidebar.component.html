@@ -1,20 +1,19 @@
 <div id="mySidenav" class="sidenav">
+    <div class="row">
+    <div class="col-xs-8 col-xs-offset-2" >
+    <!--  <img class="img img-responsive" style="width:25%;height:9vh;min-width:70px;margin-right: -5%;margin-top: 1% ;" src="../../assets/RIL.png"/> -->  <!--  float:center style removed -->
+ </div>
+ <div class="col-xs-2" style="height: 9vh;">
     <a href="javascript:void(0)" class="closebtn" style="border: none;" (click)="closeNav()">&times;</a>
-    <!-- <div class="line"></div>-->    
-    <!-- <div *ngFor = "let x of navtabs">
-    	<hr>
-    	<div *ngIf = "!x.isDD"> 
-    	<a routerLink="/{{x.Title}}">{{x.Title}}</a>
-    	</div>
-    	<div *ngIf = "x.isDD">
-    	<app-dropdown [Title]="x.Title" [values]="jobs"></app-dropdown>
-    	</div>	
-    </div> -->
-    <div *ngFor = "let x of navtabs">
-    	<hr>
-    	<a routerLink="/{{x.Title}}">{{x.Title}}</a>
-    </div>
-    <hr>
+</div>
 </div>
 
-<router-outlet></router-outlet>
+    <div *ngFor = "let x of navtabs">
+    	<hr>
+        <a routerLink="/{{x}}" >{{x}}</a>
+    	<!-- <a routerLink="/{{x.Title}}">{{x.Title}}</a> -->
+    </div>
+    <hr>
+
+</div>
+

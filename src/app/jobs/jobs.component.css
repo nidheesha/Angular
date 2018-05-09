@@ -1,36 +1,151 @@
 
 #data{
      height: 100vh;
-     width: 95vw;
+     width: 83vw;
      margin-left:200px;
      position: absolute;
-     overflow: auto;
+  /*   overflow: auto;*/
      padding-left:10px; 
      text-align: justify;
-     transition: margin-left .5s;
+     transition: margin-left .5s, width .5s;
      padding-bottom: 100px;
     }
     .tabcontent{
     padding-bottom: 100px;
 }
 
-.btn{
+/*.btn{
 width:100%;
 text-align: left;
 color:#00004d;
 background-color: #cccccc;
-/*padding-left: 0px;*/
-}
+}*/
 
-.btn span{
+/*.btn span{
     padding-left:2%; 
-}
-.dropdown-menu{
+}*/
+/*.dropdown-menu{
     text-align: center;
     width: 100%;
     background-color: #f2f2f2;
     color:#00004d;
-}
-#menu{
+}*/
+/*#menu{
     color:#00004d;
+}*/
+.row{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 1.5%;
+/*    border-width: 2px;
+     box-shadow: 5px 5px 5px #aaa;
+     margin-top: 10px;*/
+     
 }
+
+.navbar-default {
+  font-size: 1.15em;
+  font-weight: 400;
+  /*background-color: #006b96;*/
+  background-color: white;
+  padding: 0px;
+  border: 0px;
+  border-radius: 0px;
+}
+
+.navbar-default .navbar-nav>li>a { /*style for dropdown heading i.e., job list*/
+  color: #00004d;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  font-weight: bold;
+}
+
+.navbar-default .navbar-brand { /* for JOB-1*/
+  color: #00004d;
+}
+
+
+.navbar-default .navbar-brand:hover {
+ /* color: #ffffff;*/
+  font-weight:bold;
+  text-shadow: 1px -1px 8px #b3e9ff;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  background-color: #00004d;
+  color: white;
+
+  /*gives color to the Job list button when clicked*/
+}
+
+.navbar-default .navbar-toggle {
+  border: none;
+  color: #00004d;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  /*background-color: #002433;*/
+  font-weight: bold;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #00004d;
+}
+
+
+.dropdown-menu {
+  background-color: #00004d;
+  color: white;
+  border: 0px;
+  border-radius: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  /*for the dropdown box*/
+}
+.dropdown-menu>li>a {
+  /*background-color: #00004d;*/
+  color: white!important;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+  background-color:#f2f2f2 ;
+  color:#00004d!important;
+}
+
+
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: white;
+}
+@media (max-width: 767px) { 
+  .dropdown-menu>li>a {
+    background-color: white;
+    color: #00004d!important;
+  }
+  .dropdown-menu>li>a:hover {
+     background-color: #00004d;
+    font-weight: bold;
+    color:white!important;
+  }
+  
+/*.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #00004d;
+}  
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: #00004d;
+    background-color: #f2f2f2;
+     font-weight: bold;
+  }
+*/  
+ /* .dropdown-menu .divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #005577;
+  }*/
+} /* END Media Query */

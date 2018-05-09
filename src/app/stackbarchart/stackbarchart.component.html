@@ -1,0 +1,36 @@
+<!--   
+  <ngx-charts-bar-vertical-stacked 
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="jobsassets"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [barPadding] = "barPadding"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-vertical-stacked> -->
+   <!--  [view]="view" -->
+    <!-- style="width:70vw;" -->
+
+
+    <div>
+      <div style="display: block">
+        <canvas baseChart
+                height = '300'
+                [colors] ="colors"
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+<!--       </div>
+      <button (click)="randomize()">Update</button>min-height="500" width="150"
+    </div> -->
+

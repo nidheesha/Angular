@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import{ tab } from '../tab'
+//import{ tab } from '../tab'
 
 @Component({
   selector: 'app-dropdown',
@@ -8,7 +8,7 @@ import{ tab } from '../tab'
 })
 export class DropdownComponent implements OnInit {
   @Input()
-  values : tab[] ;
+  values :String[] ;
   @Input()
   Title : String ;
 

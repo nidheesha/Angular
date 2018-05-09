@@ -1,0 +1,52 @@
+<div class="panel-group" >
+		          <div class="panel panel-default">
+		            <div class="panel-heading">
+		              <h4 class="panel-title">
+		                <a data-toggle="collapse" [attr.href]="'#collapse' + id"><strong>
+		                	<p [class.text-danger]="header=='High Risk Regions'" [class.text-warning]="header =='Medium Risk Regions'" [class.text-muted]="header =='Low Risk Regions'" 
+		                	[class.text-success]="header=='Reference for Healthy Condition'">{{header}}</p></strong></a>
+		              </h4>
+		            </div>
+		            <div [attr.id]="'collapse' + id" class="panel-collapse collapse" [class.in]="id=='1'">
+		              <div class="panel-body" id = "images" >		            
+			             <div class="row" *ngFor='let count of num'>
+			   				<div *ngIf="count*4+4<=images.length" >
+			   					<div class="col-md-3" *ngFor = "let x of images | slice:(count*4):(count*4+4)">
+				                    <div class="thumbnail">
+				                    	<a routerLink = "/Viewer/{{x['serial']}}">
+				                        <img src="{{x['path']}}" alt="CCUSTACK" style="width:100%"/>
+				                    </a>
+				                        <div class="caption">
+				                          <p *ngIf="x['height']" ><strong>Height : {{x['height']}} m</strong></p>
+				                           <a href="{{x['path']}}"  download>
+									          <span class="glyphicon glyphicon-download-alt"></span>
+									        </a>
+				                          <p>{{x['content']}}</p>
+				                        </div>
+				                    </div>
+				                  </div>
+			   				</div>
+			   				
+			   				<div *ngIf="(count*4)+4>images.length" >
+			   					<div class="col-md-3" *ngFor = "let x of images | slice:(count*4):( images.length )">
+				                    <div class="thumbnail">
+				                    	<a routerLink = "/Viewer/{{x['serial']}}">
+				                        <img src= "{{x['path']}}"  alt="CCUSTACK" style="width:100%"/>
+				                    </a>
+				                        <div class="caption">
+				                          <p *ngIf="x['height']" ><strong>Height : {{x['height']}} m</strong></p>
+				                          <a href="{{x['path']}}"  download>
+									          <span class="glyphicon glyphicon-download-alt"></span>
+									       </a>
+				                          <p>{{x['content']}}</p>
+				                        </div>
+				                    </div>
+				                  </div>
+			   				</div>
+			             </div>
+		              </div>
+		              <div class="panel-footer">{{footer}}</div>
+		            </div>
+		          </div>
+</div> 
+

@@ -1,0 +1,12 @@
+<app-sidebar [navtabs] = "navs"></app-sidebar>
+<div id="data">
+
+<app-header (onclick)="onclick($event)"></app-header>
+    <div class="col-sm-9 col-sm-offset-1 " style="text-align: justify;">
+        <div class="tabcontnent">
+          <app-table [columns]="col" [rows]="data" ></app-table>     
+    </div>   
+</div>
+    <div style="margin-bottom: 100px; visibility: hidden;"></div>   
+
+</div>

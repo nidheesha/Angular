@@ -1,0 +1,31 @@
+
+
+  <div class="container-fluid">
+     <nav class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
+       <!--  <span class="sr-only">Toggle navigation</span> -->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">{{this.g.selectedjob | uppercase}}</a>
+      <a class="navbar-brand"  href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> {{this.g.selectedasset}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Asset List<span class="caret"></span></a>
+          <ul class="dropdown-menu" >
+            <li *ngFor = "let x of assetslist">  <a id="menu" (click)="onassetclick(x)">{{x}}</a></li>
+         </ul>
+        </li>
+      </ul>
+    </div>
+    </nav>
+  </div>
+
+

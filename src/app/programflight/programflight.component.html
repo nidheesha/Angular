@@ -1,0 +1,25 @@
+<app-sidebar [navtabs] = "navs"></app-sidebar>
+
+<div id="data">
+	
+<app-header  (onclick)="onclick($event)"></app-header>
+
+
+    <div class="col-xs-*" style="text-align: justify;">
+        <div class="tabcontnent">
+        	<h3>Program Flight</h3>
+        	<p>Noctua, during the trial inspection of the flare stack at BPCL performed a
+				complete automated flight for 4 hours totally (with breaks for battery and memory card/
+				auxiliary device replacement only)on 18/04/2017 (dates). The drone was able to achieve
+				linear scanning of the stack from 4 different angles using a pre-programmed flight path.
+				The accuracy was near about perfect and almost no deviation was observed during the
+				flights. The same was reported to BORL personnel and has also been shown in the
+				stable videos attached in appendix. The inspection was done from ??? distance using both
+				4K UHD video camera and a state-of-the-art thermal imaging device. </p>
+               
+		      <app-accordian [header]="'Program'+ ' Flight' + ' Images'" [images]="images" [footer]="" ></app-accordian>
+		    </div>   
+		</div>
+    <div style="margin-bottom: 100px; visibility: hidden;"></div>   
+		
+	</div>

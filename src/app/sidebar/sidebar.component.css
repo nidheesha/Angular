@@ -10,7 +10,9 @@
     background-color: #cccccc;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 10px;
+    /*padding-top: 60px;*/
+
 }
 hr { 
     display: block;
@@ -48,7 +50,7 @@ hr {
     top: 0;
     right: 25px;
     font-size: 30px;
-    margin-left: 50px;
+   /* margin-left: 50px;*/
 }
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}

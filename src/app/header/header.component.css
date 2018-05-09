@@ -1,0 +1,111 @@
+/*.row{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}*/
+
+
+.navbar-default {
+  font-size: 1.15em;
+  font-weight: 400;
+  /*background-color: #006b96;*/
+  background-color: white;
+  padding: 0px;
+  border: 0px;
+  border-radius: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #00004d;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  font-weight: bold;
+}
+
+.navbar-default .navbar-brand {
+  color: #00004d;
+}
+
+.navbar-default .navbar-brand:hover {
+ /* color: #ffffff;*/
+  font-weight:bold;
+  text-shadow: 1px -1px 8px #b3e9ff;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  background-color: #00004d;
+  color: white;
+}
+
+.navbar-default .navbar-toggle {
+  border: none;
+  color: #00004d;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  /*background-color: #002433;*/
+  font-weight: bold;
+}
+
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #00004d;
+}
+
+.dropdown-menu {
+  background-color: #00004d;
+  color: white;
+  border: 0px;
+  border-radius: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*.dropdown-menu>li>a {
+  background-color: #00004d;
+  color: white;
+}
+*/
+/*.dropdown-menu>li>a:hover, .dropdown-menu>li>a:hover {
+  background-color:#f2f2f2 ;
+  color:#00004d;
+}
+*/
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: #00004d;
+}
+
+@media (max-width: 767px) { 
+  /*.dropdown-menu>li>a {
+    background-color: white;
+    color: #00004d;
+  }
+  .dropdown-menu>li>a:hover {
+     background-color: #00004d;
+    font-weight: bold;
+  }
+  */
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #00004d;
+}  
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: #00004d;
+    background-color: #f2f2f2;
+     font-weight: bold;
+  }
+  
+ /* .dropdown-menu .divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #005577;
+  }*/
+} /* END Media Query */

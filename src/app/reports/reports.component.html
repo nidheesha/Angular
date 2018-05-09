@@ -1,6 +1,7 @@
+<app-sidebar [navtabs] = "navs"></app-sidebar>
 <div id="data">
-    <div class="col-sm-*" style="text-align: justify;">
-        <div id="Reports" class="tabcontent">
+    <div class="col-sm-10" style="text-align: justify;">
+        <div id="Reports" class="tabcontent" >
             <h3>Jobs performed and links to the final Reports</h3>   
             <!-- <table>
   <tr>
@@ -35,4 +36,7 @@
         </div> -->
           <app-table [columns]="col" [rows]="data" (onclick)="onclick($event)"></app-table>
     </div>   
+</div>
+    <div style="margin-bottom: 100px; visibility: hidden;"></div>   
+
 </div>

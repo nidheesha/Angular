@@ -14,6 +14,8 @@
 
 {{Title}}
 <select>
-  	    <option  *ngFor = "let x of values" id="menu" (click)="onclick($event.target.value)" value="{{x.Title}}"><pre>{{x.Title}}</pre></option>
+  	    <option  *ngFor = "let x of values" id="menu" (click)="onclick($event.target.value)" value="{{x}}"><pre>{{x}}</pre></option>
   	
   </select>
+
+ <!--  <li *ngFor="let item of list | slice:0:10; let i=index" class="dropdown-item" (click)="onClick(item)">{{item.text}}</li> -->

@@ -10,6 +10,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./reports.component.css']
 })
 export class ReportsComponent implements OnInit {
+  navs:string[];
 	col:Array<any>;// = Reportcolumns;
 	data:Array<any>;// = ReportTableData;
   path:Array<any> = Reportpaths;
@@ -17,6 +18,7 @@ export class ReportsComponent implements OnInit {
   constructor(private dataservice:DataService) { }
 
   ngOnInit() {
+    this.dataservice.page1tabs().subscribe(x => this.navs = x);
     this.dataservice.reportcolumnservice().subscribe(x => this.col = x);
     this.dataservice.reportdataservice().subscribe(x => this.data = x);
   }

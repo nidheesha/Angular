@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { tab } from '../tab';
+//import { tab } from '../tab';
+import { globals } from '../globals'
 import { ChartData } from '../chartdataclass' ;
+//import { jobsassets } from '../jobsassets';
 //import { jobstablecolumns } from '../jobstablecolumns';
 //import { jobstabledata } from '../jobstabledata';
 @Component({
@@ -10,36 +12,53 @@ import { ChartData } from '../chartdataclass' ;
   styleUrls: ['./jobs.component.css']
 })
 export class JobsComponent implements OnInit {
-	joblist:tab[];
- 	chartlabels: Array<string>;
-  chartdata: number[];
+  navs:string[];
+  data:any[];// = jobsassets;
+  labels:string[];
+  xtitle:string = "Assets Handled";
+  ytitle:string = "Risks Detected "; 
+	joblist:string[];
+ 	// chartlabels: Array<string>;
+  // chartdata: number[];
+
   titleofjob:string;
-  col:Array<any>;//=jobstablecolumns;
-  datajobs:Array<any>;//=jobstabledata;
-  constructor(private dataservice:DataService) { }
+  // x:try;
+  // x.update("hi");
+  // x.print();
+  // col:Array<any>;//=jobstablecolumns;
+  // datajobs:Array<any>;//=jobstabledata;
+  constructor(private dataservice:DataService, private g:globals) { }
 
   ngOnInit() {
+   
+    this.dataservice.page1tabs().subscribe(x=>this.navs = x);
   	this.service();
-  	this.chartdata=null;
-  	this.chartlabels=null;
-  	this.col = null;
-    this.datajobs = null;
-    this.onclick(this.joblist[0]);
+  	// this.chartlabels=null;
+  	// this.col = null;
+    //x = "mine";
+   //  this.datajobs = null;
+   this.g.selectedasset='';
+   if(this.g.selectedjob==''){
+    this.onclick(this.joblist[0]);}
+    else{
+      this.onclick(this.g.selectedjob)
+    }
   }
   service():void{
+
   	this.dataservice.service2().subscribe(joblist => this.joblist=joblist);
   	
   }
 
-  onclick(x:tab):void{
-    this.titleofjob = x.Title;
-    console.log(x);
-    this.dataservice.jobstableservice(x.Title).subscribe(a => {this.col = a['Columns'];
-    this.datajobs = a['Data'];});
- 	this.dataservice.chartservice(x.Title).subscribe(data => {this.chartlabels = data['Labels'];
- 		this.chartdata = data['Data'];}); 
+  onclick(x:string):void{
+    this.g.selectedjob = x;
+    this.titleofjob = x;
+    this.dataservice.stackbarservice(x).subscribe(y => {this.data = y['data'];this.labels = y['labels'];} );//a => {this.data = a['data'];console.log(a['data']);})
+    // console.log(x);
+  //   this.dataservice.jobstableservice(x.Title).subscribe(a => {this.col = a['Columns'];
+  //   this.datajobs = a['Data'];});
+ 	// this.dataservice.chartservice(x.Title).subscribe(data => {this.chartlabels = data['Labels'];
+ 	// 	this.chartdata = data['Data'];}); 
 }
-  
-  
 
 }
